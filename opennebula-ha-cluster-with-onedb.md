@@ -32,6 +32,7 @@ Set hostname and update `/etc/hosts` across all nodes:
 192.168.100.11 one-fe2
 192.168.100.12 one-fe3
 192.168.100.20 one-hv1
+192.168.100.21 one-hv1
 192.168.100.30 one-nfs
 ```
 
@@ -54,6 +55,7 @@ Distribute keys:
 ssh-copy-id oneadmin@one-fe2
 ssh-copy-id oneadmin@one-fe3
 ssh-copy-id oneadmin@one-hv1
+ssh-copy-id oneadmin@one-hv2
 ```
 
 Ensure consistent UID/GID across all nodes.
@@ -278,6 +280,7 @@ scp /etc/ceph/ceph.client.oneadmin.keyring one-fe1:/etc/ceph/
 scp /etc/ceph/ceph.client.oneadmin.keyring one-fe2:/etc/ceph/
 scp /etc/ceph/ceph.client.oneadmin.keyring one-fe3:/etc/ceph/
 scp /etc/ceph/ceph.client.oneadmin.keyring one-hv1:/etc/ceph/
+scp /etc/ceph/ceph.client.oneadmin.keyring one-hv2:/etc/ceph/
 ```
 
 ---
